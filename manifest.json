@@ -1,0 +1,8 @@
+{
+  "name": "Recipe Nutrition Calculator",
+  "short_name": "recipe-nutri",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1"
+}
