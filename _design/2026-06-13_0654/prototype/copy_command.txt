@@ -1,0 +1,73 @@
+Fetch this design file, read its readme, and implement the relevant aspects of the design. https://api.anthropic.com/v1/design/h/-ofPsq6EBL_8hrXmmRrDBQ?open_file=index.html
+Implement: ## 指示
+ClaudeDesignによって作成されたデザインを効果的に反映してほしい。
+
+**必ず最初に以下のデザイン参照画像を Read tool で読み込み、配色・レイアウト・フォント・セクション構成を視覚的に把握してから実装を開始してください:**
+- （LPページ全体デザイン）
+- （サービスページデザイン）
+
+- LPページとサービスページのデザインを実際のWebサービスに反映する。
+- **LPページは必ず `lp/index.html` として新規作成すること**（ディレクトリが存在しない場合は `mkdir lp` で作成）
+- サービスページは既存の / を更新。ユーザの利用動線を優先にしつつデザイン変更して。
+- コンテンツの目的に合わせて良いが、PCでもモバイルでも見れるように調整してほしい。
+- 全体のトップページのサービスページへのリンクは、LPページのURL（/lp/）に変更する
+- 今回の新デザイン（LPページのテーマカラーや素材・文字フォント・画像など）を該当既存サービスの全ページに刷新すること
+
+## ⚠️ 作業スコープ（必ず守ること）
+
+**読み込み・編集するファイルはこれだけ：**
+- `index.html`（サービスページ）
+- `lp/index.html`（LPページ・存在しない場合は新規作成）
+- 既存の `.css` ファイル（存在する場合のみ）
+
+**それ以外のファイル（contact.html, privacy-policy.html, terms.html, usage.html 等）は読まない・触らない。**
+ディレクトリ探索・ファイル一覧取得も不要。上記ファイルを直接編集すること。
+
+## ⚠️ 必須：実装完了後に必ず以下を実行すること（ローカルサーバーテストは不要）
+
+```bash
+git add -A
+git commit -m "Apply: design update with LP page"
+git push origin main
+```
+
+**git push origin main を実行してから完了とすること。push 完了のログを確認すること。**
+ローカルHTTPサーバーでのテストは不要。push が完了した時点で作業完了。
+
+## Claude Design プロジェクト
+
+
+Claude Design で生成されたコンポーネント（JSX・CSS）やプロトタイプの構成・スタイルを参考に実装すること。
+
+## デザイン参照画像（ローカル）
+- LP全体デザイン:      
+- サービスページデザイン: 
+- アイコン素材シート:   
+- 分割済みアイコン:    /Users/masayukitokunaga/workspace/30service/recipe-nutrition-calculator/assets/icons/split
+
+## 制約
+- GTM・GA4・AdSenseタグは変更しない
+- アフィリエイトリンクは変更しない
+- コアJSロジック（診断・計算ロジック）は変更しない
+
+## 対象プロジェクト
+300 レシピ栄養計算ツール recipe-nutrition-calculator https://appadaycreator.com/recipe-nutrition-calculator/
+/Users/masayukitokunaga/workspace/30service/recipe-nutrition-calculator/
+
+## ②デザイン改善要約（反映すること）
+SUMMARY_JSON:{"a":["28品目アレルゲン全対応（特定7品目＋推奨21品目）に拡張し結果の精度を向上","症状記録・経過トラッキング機能追加（loadHistory/drawChartの日付別グラフ活用）","医師への共有用PDF出力をワンタップ化（downloadResult/printResult強化）"],"b":["クイズ進行バーと食材選択に視覚アイコン表示でタップ操作性を向上","結果画面にSNSシェアボタン＋「もう一度診断する」ボタンを追加","モバイル最適化：食材選択をグリッドUIに変更しタップ精度を改善"],"d":["競合にない「外食時の注意点」機能を結果画面で前面訴求し差別化","ブラウザ完結・個人情報ゼロのプライバシー強度を競合比較として明示","代替食品・レシピ提案への内部リンクでコンテンツSEO＆回遊率強化"],"seo_h1":"食物アレルギー・除去食 無料診断｜代替食品・外食対策まで即わかる","seo_meta":"症状と食材を選ぶだけで除去すべき食材・代替品・外食注意点を即時診断。28品目対応・完全無料・個人情報不要でブラウザ完結。","forbidden":["GTM-TXQGZRF9","G-ZDPNYD2875","ca-pub-8427583028015858","gtag","getResult","drawChart","loadHistory","saveResult","restoreResult","downloadResult","printResult","startQuiz","renderQ","answer","showResult"],"design_tokens":{"primary":"#0D9488","accent":"#F59E0B","font":"sans-serif","mood":"warm","cta":"今すぐ診断する"}}
+
+## ブランドカラー（必ずこの配色でCSSを実装すること）
+  - メインカラー: #0D9488（ボタン・見出し・強調要素に使用）
+  - アクセントカラー: #F59E0B（CTA・ハイライトに使用）
+  - フォント: sans-serif
+  - CTAボタン文言: 「今すぐ診断する」
+
+## 現在のindex.htmlの構成情報（事前読み込み済み・tool callでのファイル読み込み不要）
+<title>レシピ栄養計算ツール【無料】簡単・無料計算</title>
+<meta name="description" content="食材と量を入力してカロリー・タンパク質・脂質・炭水化物を自動計算。献立の栄養バランスチェックに">
+<!-- GTM: GTM-TXQGZRF9 -->
+<!-- AdSense: ca-pub-8427583028015858 -->
+<!-- Affiliate A8: a8.net/svt/ejp?a8mat=4B3WJ5+BKTQSQ+CW6+CKIAMA -->
+<!-- JS functions: buildSelectOptions, updateRemoveBtns, removeRow, addRow, setNutrient, drawPFCChart, resetRows, copyResultText, exportAsCSV, calculate, loadFromStorage, saveToStorage, addToHistory, showHistory -->
+<h1>レシピ栄養計算ツール</h1>
