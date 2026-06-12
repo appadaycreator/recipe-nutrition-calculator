@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-TXQGZRF9");</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7c3aed">
+<title>レシピ栄養計算ツール | 食材を入れるだけで栄養バランスを瞬時に確認【無料】</title>
+<meta name="description" content="食材と量を入力するだけでカロリー・PFC（タンパク質・脂質・炭水化物）を自動計算。ダイエット・筋トレ・健康管理に最適。登録不要・完全無料。">
+<meta name="author" content="AppADayCreator | Tech&Brace">
+<link rel="canonical" href="https://appadaycreator.com/recipe-nutrition-calculator/lp/">
+<meta property="og:title" content="レシピ栄養計算ツール | 食材を入れるだけで栄養バランスを瞬時に確認【無料】">
+<meta property="og:description" content="食材と量を入力するだけでカロリー・PFC（タンパク質・脂質・炭水化物）を自動計算。登録不要・完全無料でご利用いただけます。">
+<meta property="og:url" content="https://appadaycreator.com/recipe-nutrition-calculator/lp/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://appadaycreator.com/assets/ogp-default.png">
+<meta property="og:site_name" content="appadaycreator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="レシピ栄養計算ツール | 食材を入れるだけで栄養バランスを瞬時に確認【無料】">
+<meta name="twitter:description" content="食材と量を入力するだけでカロリー・PFC自動計算。登録不要・完全無料。">
+<meta name="twitter:image" content="https://appadaycreator.com/assets/ogp-default.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥗</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"レシピ栄養計算ツール ランディングページ","description":"食材と量を入力するだけでカロリー・PFCを自動計算。登録不要・完全無料。","url":"https://appadaycreator.com/recipe-nutrition-calculator/lp/","inLanguage":"ja"}</script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --primary: #7c3aed;
+    --primary-dark: #5b21b6;
+    --primary-light: #ede9fe;
+    --primary-mid: #a78bfa;
+    --accent: #f59e0b;
+    --text: #1f2937;
+    --text-muted: #6b7280;
+    --surface: #f8fafc;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --radius: 16px;
+    --shadow: 0 4px 24px rgba(124,58,237,0.10);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    background: #fff;
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── nav ── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .nav-logo span { font-size: 22px; }
+  .nav-cta {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity .2s;
+  }
+  .nav-cta:hover { opacity: 0.88; }
+
+  /* ── hero ── */
+  .hero {
+    background: linear-gradient(145deg, #4c1d95 0%, #7c3aed 50%, #8b5cf6 100%);
+    color: white;
+    padding: 64px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 260px; height: 260px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 320px; height: 320px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: .04em;
+  }
+  .hero-emoji { font-size: 68px; margin-bottom: 16px; display: block; }
+  .hero h1 {
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: -.01em;
+  }
+  .hero h1 em { font-style: normal; color: #fde68a; }
+  .hero-sub {
+    font-size: clamp(15px, 2.5vw, 18px);
+    opacity: 0.88;
+    margin-bottom: 32px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 800;
+    padding: 18px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    transition: transform .2s, box-shadow .2s;
+    min-width: 280px;
+  }
+  .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+  .btn-hero .arrow { font-size: 20px; }
+  .hero-note { font-size: 13px; opacity: 0.7; }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-stat-item { text-align: center; }
+  .hero-stat-num { font-size: 28px; font-weight: 800; color: #fde68a; line-height: 1; }
+  .hero-stat-label { font-size: 12px; opacity: 0.8; margin-top: 4px; }
+
+  /* ── section base ── */
+  .section { padding: 64px 20px; }
+  .section-inner { max-width: 860px; margin: 0 auto; }
+  .section-tag {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .section-title {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -.01em;
+  }
+  .section-desc { font-size: 16px; color: var(--text-muted); max-width: 600px; }
+  .section-header { margin-bottom: 40px; }
+
+  /* ── problem ── */
+  .section-problem { background: #fafafa; }
+  .problem-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .problem-item {
+    background: #fff;
+    border: 1.5px solid #fee2e2;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .problem-icon { font-size: 28px; flex-shrink: 0; }
+  .problem-text { font-size: 15px; color: #374151; font-weight: 500; line-height: 1.5; }
+
+  /* ── features ── */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .feature-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .feature-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(124,58,237,0.15); }
+  .feature-icon { font-size: 38px; margin-bottom: 14px; display: block; }
+  .feature-title { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .feature-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── how it works ── */
+  .section-how { background: var(--surface); }
+  .steps { display: flex; flex-direction: column; gap: 24px; counter-reset: steps; }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+    counter-increment: steps;
+    position: relative;
+  }
+  .step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-body { flex: 1; }
+  .step-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .step-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .step-tag {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+  }
+
+  /* ── nutrition preview ── */
+  .preview-section { background: var(--primary); color: white; padding: 64px 20px; }
+  .preview-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .preview-text { }
+  .preview-text .section-tag { background: rgba(255,255,255,0.2); color: white; }
+  .preview-text .section-title { color: white; }
+  .preview-text .section-desc { color: rgba(255,255,255,0.8); }
+  .preview-list { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .preview-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+  }
+  .preview-list-item::before {
+    content: '✓';
+    width: 24px;
+    height: 24px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .preview-card-demo {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 24px;
+  }
+  .demo-kcal-label { font-size: 11px; font-weight: 700; color: #fde68a; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+  .demo-kcal-num { font-size: 56px; font-weight: 800; color: #fde68a; line-height: 1; margin-bottom: 4px; }
+  .demo-kcal-sub { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
+  .demo-pfc { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .demo-pfc-item { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 12px 8px; text-align: center; }
+  .demo-pfc-label { font-size: 11px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+  .demo-pfc-val { font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px; }
+  .demo-bar-track { height: 6px; background: rgba(255,255,255,0.15); border-radius: 3px; overflow: hidden; }
+  .demo-bar-fill { height: 100%; border-radius: 3px; }
+
+  /* ── use cases ── */
+  .usecase-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .usecase-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    text-align: center;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .usecase-card:hover { border-color: var(--primary-mid); box-shadow: 0 4px 20px rgba(124,58,237,0.12); }
+  .usecase-emoji { font-size: 36px; margin-bottom: 10px; display: block; }
+  .usecase-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .usecase-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+  /* ── testimonials ── */
+  .section-testimonials { background: var(--surface); }
+  .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .testimonial-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    border: 1px solid var(--border);
+  }
+  .testimonial-stars { color: #f59e0b; font-size: 18px; margin-bottom: 10px; letter-spacing: 2px; }
+  .testimonial-text { font-size: 14px; color: #374151; line-height: 1.7; margin-bottom: 14px; }
+  .testimonial-author { display: flex; align-items: center; gap: 10px; }
+  .testimonial-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .testimonial-name { font-size: 13px; font-weight: 700; color: var(--text); }
+  .testimonial-meta { font-size: 12px; color: var(--text-muted); }
+
+  /* ── FAQ ── */
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .faq-q {
+    padding: 18px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    user-select: none;
+    list-style: none;
+  }
+  .faq-q::marker, .faq-q::-webkit-details-marker { display: none; }
+  .faq-q-text { flex: 1; }
+  .faq-chevron { font-size: 18px; transition: transform .2s; color: var(--primary); flex-shrink: 0; }
+  details[open] .faq-chevron { transform: rotate(180deg); }
+  .faq-a { padding: 0 20px 18px; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── final CTA ── */
+  .section-cta {
+    background: linear-gradient(145deg, #4c1d95, #7c3aed);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .cta-inner { max-width: 560px; margin: 0 auto; }
+  .cta-emoji { font-size: 56px; margin-bottom: 16px; display: block; }
+  .cta-title { font-size: clamp(24px, 4vw, 36px); font-weight: 800; margin-bottom: 12px; line-height: 1.25; }
+  .cta-desc { font-size: 16px; opacity: 0.85; margin-bottom: 32px; }
+  .btn-cta-main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 800;
+    padding: 18px 48px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    transition: transform .2s, box-shadow .2s;
+    min-width: 280px;
+  }
+  .btn-cta-main:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+  .cta-note { font-size: 13px; opacity: 0.65; margin-top: 14px; }
+
+  /* ── footer ── */
+  .footer {
+    background: #1f2937;
+    color: rgba(255,255,255,0.7);
+    padding: 32px 20px;
+    text-align: center;
+  }
+  .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color .2s; }
+  .footer-links a:hover { color: rgba(255,255,255,0.9); }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+  /* ── responsive ── */
+  @media (max-width: 640px) {
+    .hero { padding: 48px 16px 64px; }
+    .btn-hero { font-size: 16px; padding: 16px 28px; min-width: 240px; }
+    .preview-inner { grid-template-columns: 1fr; }
+    .hero-stats { gap: 20px; }
+    .section { padding: 48px 16px; }
+    .steps { gap: 16px; }
+    .step { padding: 18px; }
+    .section-cta { padding: 64px 16px; }
+    .btn-cta-main { font-size: 16px; padding: 16px 28px; min-width: 240px; }
+  }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- nav -->
+<nav class="nav" role="navigation" aria-label="メインナビゲーション">
+  <a href="/recipe-nutrition-calculator/lp/" class="nav-logo">
+    <span>🥗</span> レシピ栄養計算
+  </a>
+  <a href="/recipe-nutrition-calculator/" class="nav-cta">無料で使う →</a>
+</nav>
+
+<!-- hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <span class="hero-badge">✨ 完全無料・登録不要</span>
+    <span class="hero-emoji" role="img" aria-label="サラダ">🥗</span>
+    <h1 id="hero-title">食材を入れるだけで<br><em>栄養バランスが一目でわかる</em></h1>
+    <p class="hero-sub">カロリー・タンパク質・脂質・炭水化物を瞬時に計算。<br>ダイエット・筋トレ・健康管理に役立てよう。</p>
+    <div class="hero-cta-wrap">
+      <a href="/recipe-nutrition-calculator/" class="btn-hero">
+        今すぐ無料で計算する
+        <span class="arrow">→</span>
+      </a>
+      <p class="hero-note">登録不要・完全無料・スマホ対応</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">35+</div>
+        <div class="hero-stat-label">収録食材数</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">10</div>
+        <div class="hero-stat-label">最大食材追加数</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">0円</div>
+        <div class="hero-stat-label">利用料金</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- problem -->
+<section class="section section-problem" aria-labelledby="problem-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">こんな悩みありませんか？</span>
+      <h2 class="section-title" id="problem-title">食事管理って、<br>意外と面倒くさい…</h2>
+    </div>
+    <div class="problem-list">
+      <div class="problem-item">
+        <span class="problem-icon">😓</span>
+        <p class="problem-text">カロリーを調べるのにいちいち検索するのが手間</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">🤔</span>
+        <p class="problem-text">タンパク質・脂質・炭水化物のバランスがよくわからない</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">📱</span>
+        <p class="problem-text">アプリのインストールや会員登録が面倒</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">💸</span>
+        <p class="problem-text">栄養管理アプリが有料でハードルが高い</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- features -->
+<section class="section" aria-labelledby="features-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">特徴</span>
+      <h2 class="section-title" id="features-title">このツールで、<br>すべてが解決します</h2>
+      <p class="section-desc">シンプルな操作で、本当に必要な栄養情報をすぐに表示。</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <h3 class="feature-title">3ステップで即計算</h3>
+        <p class="feature-desc">食材を選んでグラムを入力してボタンを押すだけ。アカウント作成も不要です。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📊</span>
+        <h3 class="feature-title">PFCバランスを可視化</h3>
+        <p class="feature-desc">カロリーだけでなく、タンパク質・脂質・炭水化物を1日の推奨量と対比して表示。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🥩</span>
+        <h3 class="feature-title">35種類以上の食材</h3>
+        <p class="feature-desc">鶏胸肉・白米・ブロッコリーなど、日本の食卓でよく使う食材を幅広く収録。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">➕</span>
+        <h3 class="feature-title">最大10食材を一気に</h3>
+        <p class="feature-desc">1食分の複数食材をまとめて入力して一括計算。献立全体の栄養管理が簡単。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📱</span>
+        <h3 class="feature-title">スマホ完全対応</h3>
+        <p class="feature-desc">PCでもスマホでも快適に使えるレスポンシブデザイン。いつでもどこでも計算できます。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🆓</span>
+        <h3 class="feature-title">完全無料・登録不要</h3>
+        <p class="feature-desc">すべての機能が無料。ブラウザを開いてすぐ使える手軽さを大切にしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- how it works -->
+<section class="section section-how" aria-labelledby="how-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">使い方</span>
+      <h2 class="section-title" id="how-title">たった3ステップで<br>栄養計算完了</h2>
+    </div>
+    <div class="steps" role="list">
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">1</div>
+        <div class="step-body">
+          <span class="step-tag">STEP 1</span>
+          <h3 class="step-title">食材をドロップダウンから選ぶ</h3>
+          <p class="step-desc">鶏胸肉・白米・ブロッコリーなど35種類以上のプリセット食材から選ぶだけ。カテゴリ別に整理されているので探しやすい。</p>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">2</div>
+        <div class="step-body">
+          <span class="step-tag">STEP 2</span>
+          <h3 class="step-title">グラム数を入力して食材を追加</h3>
+          <p class="step-desc">食材の量をグラムで入力。「＋ 食材を追加」ボタンで複数の食材を最大10個まで追加できます。</p>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-hidden="true">3</div>
+        <div class="step-body">
+          <span class="step-tag">STEP 3</span>
+          <h3 class="step-title">「栄養素を計算する」を押して確認</h3>
+          <p class="step-desc">カロリーと PFC（タンパク質・脂質・炭水化物）の合計が表示。1日の推奨量に対する割合もひと目でわかります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- preview card demo -->
+<section class="preview-section" aria-labelledby="preview-title">
+  <div class="preview-inner">
+    <div class="preview-text">
+      <span class="section-tag">結果表示</span>
+      <h2 class="section-title" id="preview-title">こんな感じで<br>結果が表示されます</h2>
+      <p class="section-desc">カロリーを大きく表示し、PFCバランスをバーグラフで視覚的に確認できます。</p>
+      <ul class="preview-list" aria-label="表示される情報">
+        <li class="preview-list-item">カロリー（kcal）を大きく表示</li>
+        <li class="preview-list-item">タンパク質・脂質・炭水化物の内訳</li>
+        <li class="preview-list-item">1日推奨量との比較バー</li>
+        <li class="preview-list-item">食材別の栄養素内訳テーブル</li>
+      </ul>
+    </div>
+    <div class="preview-card-demo" role="img" aria-label="栄養計算結果のデモ表示">
+      <div class="demo-kcal-label">TOTAL CALORIES</div>
+      <div class="demo-kcal-num">542</div>
+      <div class="demo-kcal-sub">kcal &nbsp;/&nbsp; 1日の推奨量の <strong style="color:#fde68a">27%</strong></div>
+      <div class="demo-pfc">
+        <div class="demo-pfc-item">
+          <div class="demo-pfc-label">タンパク質</div>
+          <div class="demo-pfc-val">48g</div>
+          <div class="demo-bar-track">
+            <div class="demo-bar-fill" style="width:80%;background:#a78bfa;"></div>
+          </div>
+        </div>
+        <div class="demo-pfc-item">
+          <div class="demo-pfc-label">脂質</div>
+          <div class="demo-pfc-val">12g</div>
+          <div class="demo-bar-track">
+            <div class="demo-bar-fill" style="width:22%;background:#f59e0b;"></div>
+          </div>
+        </div>
+        <div class="demo-pfc-item">
+          <div class="demo-pfc-label">炭水化物</div>
+          <div class="demo-pfc-val">56g</div>
+          <div class="demo-bar-track">
+            <div class="demo-bar-fill" style="width:19%;background:#34d399;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- use cases -->
+<section class="section" aria-labelledby="usecase-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">活用シーン</span>
+      <h2 class="section-title" id="usecase-title">こんな方に使われています</h2>
+    </div>
+    <div class="usecase-grid">
+      <div class="usecase-card">
+        <span class="usecase-emoji">💪</span>
+        <h3 class="usecase-title">筋トレ・ボディメイク</h3>
+        <p class="usecase-desc">高タンパク・低脂質の食事設計に。プロテイン量の確認にも役立ちます。</p>
+      </div>
+      <div class="usecase-card">
+        <span class="usecase-emoji">🏃</span>
+        <h3 class="usecase-title">ダイエット中</h3>
+        <p class="usecase-desc">カロリーを把握しながら、栄養バランスが崩れないよう管理できます。</p>
+      </div>
+      <div class="usecase-card">
+        <span class="usecase-emoji">🧑‍🍳</span>
+        <h3 class="usecase-title">料理・献立作り</h3>
+        <p class="usecase-desc">今日の献立の栄養バランスチェックに。食材の組み合わせを試せます。</p>
+      </div>
+      <div class="usecase-card">
+        <span class="usecase-emoji">👨‍👩‍👧</span>
+        <h3 class="usecase-title">家族の健康管理</h3>
+        <p class="usecase-desc">子どもや高齢の家族の食事栄養が十分か確認するのにも使えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- testimonials -->
+<section class="section section-testimonials" aria-labelledby="testimonials-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">ユーザーの声</span>
+      <h2 class="section-title" id="testimonials-title">使ってみた感想</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars" aria-label="星5つ">★★★★★</div>
+        <p class="testimonial-text">「インストール不要でサッと使えるのが本当に便利。筋トレの食事管理に毎日使っています。」</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">🏋️</div>
+          <div>
+            <div class="testimonial-name">30代男性</div>
+            <div class="testimonial-meta">筋トレ歴2年</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars" aria-label="星5つ">★★★★★</div>
+        <p class="testimonial-text">「PFCバランスをグラフで見せてくれるので直感的にわかりやすい。ダイエット中の食事選びに役立っています。」</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">🥗</div>
+          <div>
+            <div class="testimonial-name">20代女性</div>
+            <div class="testimonial-meta">ダイエット中</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars" aria-label="星4つ">★★★★☆</div>
+        <p class="testimonial-text">「献立を考えるときに栄養バランスが一目でわかるので、家族の食事作りにとても助かっています。」</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">👩‍🍳</div>
+          <div>
+            <div class="testimonial-name">40代女性</div>
+            <div class="testimonial-meta">2児の母</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">よくある質問</span>
+      <h2 class="section-title" id="faq-title">FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="faq-q-text">無料で使えますか？</span>
+          <span class="faq-chevron" aria-hidden="true">▼</span>
+        </summary>
+        <p class="faq-a">はい、完全無料でご利用いただけます。登録やインストールも一切不要です。ブラウザからすぐにお使いいただけます。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="faq-q-text">何種類の食材が収録されていますか？</span>
+          <span class="faq-chevron" aria-hidden="true">▼</span>
+        </summary>
+        <p class="faq-a">肉類・魚介類・野菜類・穀物豆類・乳製品・油脂など35種類以上の食材が収録されています。日本の食卓でよく使われる食材を中心に揃えています。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="faq-q-text">1日の推奨量はどんな基準ですか？</span>
+          <span class="faq-chevron" aria-hidden="true">▼</span>
+        </summary>
+        <p class="faq-a">成人平均を基準に、カロリー2000kcal・タンパク質60g・脂質55g・炭水化物300gを目安にしています。個人差があるため、あくまでも参考としてご活用ください。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="faq-q-text">スマホでも使えますか？</span>
+          <span class="faq-chevron" aria-hidden="true">▼</span>
+        </summary>
+        <p class="faq-a">はい、PCでもスマートフォンでも快適にご利用いただけるレスポンシブデザインに対応しています。Safari・Chrome・Firefoxなど主要ブラウザで動作します。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="faq-q-text">一度に何種類の食材を計算できますか？</span>
+          <span class="faq-chevron" aria-hidden="true">▼</span>
+        </summary>
+        <p class="faq-a">最大10種類の食材を一度に追加して合計栄養素を計算できます。1食分の複数食材をまとめて計算したいときに便利です。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- final CTA -->
+<section class="section-cta" aria-labelledby="cta-title">
+  <div class="cta-inner">
+    <span class="cta-emoji" role="img" aria-label="サラダ">🥗</span>
+    <h2 class="cta-title" id="cta-title">今すぐ栄養計算を<br>始めてみましょう</h2>
+    <p class="cta-desc">登録不要・完全無料。ブラウザを開いてすぐ使えます。</p>
+    <a href="/recipe-nutrition-calculator/" class="btn-cta-main">
+      無料で栄養計算する →
+    </a>
+    <p class="cta-note">登録不要・インストール不要・スマホ対応</p>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer" role="contentinfo">
+  <nav class="footer-links" aria-label="フッターナビゲーション">
+    <a href="/recipe-nutrition-calculator/">ツールを使う</a>
+    <a href="/recipe-nutrition-calculator/usage.html">使い方</a>
+    <a href="/recipe-nutrition-calculator/privacy-policy.html">プライバシーポリシー</a>
+    <a href="/recipe-nutrition-calculator/terms.html">利用規約</a>
+    <a href="/recipe-nutrition-calculator/contact.html">お問い合わせ</a>
+    <a href="/">AppADayCreator</a>
+  </nav>
+  <p class="footer-copy">© 2024 AppADayCreator | Tech&amp;Brace. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
