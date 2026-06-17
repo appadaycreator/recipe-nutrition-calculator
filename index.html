@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Consent Mode v2 -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});(function(){try{var k='cookie-consent-v2',o='cookie-consent';var c=localStorage.getItem(k);if(!c&&localStorage.getItem(o)==='1')c='granted';if(c){var s=c==='granted'?'granted':'denied';gtag('consent','update',{'analytics_storage':s,'ad_storage':s,'ad_user_data':s,'ad_personalization':s});}}catch(e){}})();</script>
+<!-- End Consent Mode v2 -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
 new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
@@ -13,7 +16,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <meta name="theme-color" content="#7c3aed" />
     <title>レシピ栄養計算ツール【無料】簡単・無料計算</title>
     <meta name="description" content="食材と量を入力してカロリー・タンパク質・脂質・炭水化物を自動計算。献立の栄養バランスチェックに">
-<meta name="author" content="AppADayCreator | Tech&Brace">
+<meta name="author" content="AppADayCreator">
     <link rel="canonical" href="https://appadaycreator.com/recipe-nutrition-calculator/">
     <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -235,6 +238,12 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
               </div>
             </div>
 
+            <!-- M5: あなたにおすすめの関連商品 -->
+            <div id="affiliate-recommendations" style="background:#fef9e7;border:1px solid #fde68a;border-radius:12px;padding:14px;margin-bottom:14px;display:none;">
+              <div style="font-size:13px;font-weight:700;color:#92400e;margin-bottom:10px;">🛒 あなたにおすすめの商品</div>
+              <div id="recommendations-body" style="display:flex;flex-direction:column;gap:8px;"></div>
+            </div>
+
             <!-- 食材別内訳 -->
             <div class="breakdown-card">
               <div class="breakdown-title">📋 食材別内訳</div>
@@ -376,9 +385,12 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 </div>
 <h2 id="faq-h" style="font-size:1.05rem;font-weight:700;margin-bottom:12px;border-left:4px solid #4f46e5;padding-left:10px;">よくある質問</h2>
   <dl style="line-height:1.8;">
-    
-    
-    
+    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. レシピの栄養計算はどのように行われますか？</dt>
+    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">各食材の重量（グラム）×食品成分データベースの100gあたりの栄養素量÷100で計算します。日本食品標準成分表（文部科学省）をもとにした栄養素データを使用しています。実際の食品の栄養価は農産物の産地・収穫時期・調理方法によって変動するため、本ツールの計算結果はあくまで目安としてご利用ください。食事制限・医療目的での栄養管理が必要な場合は、管理栄養士へのご相談をおすすめします。</dd>
+    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. 1日の推奨栄養摂取量はどのくらいですか？</dt>
+    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">厚生労働省「日本人の食事摂取基準（2020年版）」によると、成人（30〜49歳）の1日あたりの目安は、エネルギー：男性2,700kcal・女性2,050kcal、たんぱく質：男性65g・女性50g、脂質：総エネルギーの20〜30%、炭水化物：総エネルギーの50〜65%です。食物繊維は男性21g以上・女性18g以上、食塩相当量は男性7.5g未満・女性6.5g未満が目標とされています。本ツールでレシピの栄養素を計算し、1日の食事全体とバランスを確認するのに役立てください。</dd>
+    <dt style="font-weight:600;color:#1e293b;padding:8px 0 4px">Q. カロリーを抑えながら栄養バランスをよくするコツは？</dt>
+    <dd style="font-size:.875rem;color:#475569;margin:0 0 12px;padding-left:12px;line-height:1.8">カロリーを抑えながら栄養価を高めるには「低カロリー高栄養の食材（葉物野菜・豆類・きのこ・魚）を増やす」「調理油の量を最小限にする（ノンスティックパンの活用）」「精製炭水化物（白米・白パン）を全粒穀物に一部置き換える」の3点が基本です。また「食物繊維の多い食材を先に食べる（食後血糖値の上昇を緩やかにする）」「煮る・蒸す・焼くの調理法でカロリー増加を最小限にする」も有効です。本ツールで変更前後の栄養値を比較してみてください。</dd>
   </dl>
 </section>
 </main>
@@ -613,6 +625,70 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       link.click();
     }
 
+    // M5: 栄養プロフィールに基づくアフィリエイト商品推薦
+    const AFFILIATE_PRODUCTS = {
+      high_protein: {
+        title: 'プロテインパウダー',
+        desc: '高タンパク食の栄養補助に',
+        link: 'https://px.a8.net/svt/ejp?a8mat=4B3WJ5+BKTQSQ+CW6+CKIAMA',
+        img: 'https://www16.a8.net/0.gif?a8mat=4B3WJ5+BKTQSQ+CW6+CKIAMA'
+      },
+      high_carb: {
+        title: 'スポーツドリンク・エナジーバー',
+        desc: '高炭水化物食のエネルギー補給に',
+        link: 'https://px.a8.net/svt/ejp?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642',
+        img: 'https://www14.a8.net/0.gif?a8mat=4B3WJ6+FQ9JMY+1LP8+BY642'
+      },
+      low_cal: {
+        title: '健康食・ダイエットサポート食',
+        desc: '低カロリー食のバランス補助に',
+        link: 'https://px.a8.net/svt/ejp?a8mat=4B3VR6+GFV6NE+3CJQ+64C3M',
+        img: 'https://www11.a8.net/0.gif?a8mat=4B3VR6+GFV6NE+3CJQ+64C3M'
+      },
+      balanced: {
+        title: '栄養食・バランス栄養食',
+        desc: 'バランスの良い食事のサポートに',
+        link: 'https://px.a8.net/svt/ejp?a8mat=4B3WJ5+BKTQSQ+CW6+CKIAMA',
+        img: 'https://www16.a8.net/0.gif?a8mat=4B3WJ5+BKTQSQ+CW6+CKIAMA'
+      }
+    };
+
+    // 栄養プロフィールを分析して推薦商品を決定
+    function getAffiliateRecommendations(kcal, prot, fat, carb) {
+      const total = prot + fat + carb;
+      if (total === 0) return null;
+
+      const protRatio = prot / total;
+      const carbRatio = carb / total;
+
+      if (protRatio > 0.4) return AFFILIATE_PRODUCTS.high_protein;
+      if (carbRatio > 0.5) return AFFILIATE_PRODUCTS.high_carb;
+      if (kcal < 1000) return AFFILIATE_PRODUCTS.low_cal;
+      return AFFILIATE_PRODUCTS.balanced;
+    }
+
+    // 推薦商品を表示
+    function displayAffiliateRecommendations(kcal, prot, fat, carb) {
+      const recSection = document.getElementById('affiliate-recommendations');
+      const recBody = document.getElementById('recommendations-body');
+      if (!recSection || !recBody) return;
+
+      const product = getAffiliateRecommendations(kcal, prot, fat, carb);
+      if (!product) {
+        recSection.style.display = 'none';
+        return;
+      }
+
+      recBody.innerHTML = `
+        <a href="${product.link}" rel="nofollow noopener noreferrer" target="_blank" style="padding:8px;background:white;border:1px solid #fcd34d;border-radius:8px;text-decoration:none;color:#333;display:block;">
+          <div style="font-size:13px;font-weight:600;color:#92400e;margin-bottom:2px;">${product.title}</div>
+          <div style="font-size:12px;color:#b45309;">${product.desc}</div>
+        </a>
+        <img border="0" width="1" height="1" src="${product.img}" alt="" loading="lazy">
+      `;
+      recSection.style.display = 'block';
+    }
+
     // メイン計算処理
     function calculate() {
       const rows = document.querySelectorAll('.ing-row');
@@ -653,6 +729,9 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
       // PFCグラフを描画
       drawPFCChart(prot, fat, carb);
+
+      // M5: 推薦商品を表示
+      displayAffiliateRecommendations(kcal, prot, fat, carb);
 
       // 食材別内訳テーブル
       let tableHtml = '<table class="breakdown-table"><thead><tr><th>食材</th><th>量</th><th>kcal</th><th>タンパク質</th><th>脂質</th><th>炭水化物</th></tr></thead><tbody>';
@@ -796,11 +875,10 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 <div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
 <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.08)">
 <h2 style="font-size:1.05rem;font-weight:700;margin:0 0 1rem;border-left:4px solid #4f46e5;padding-left:10px;color:#1e293b">よくある質問（詳細）</h2>
-
-
-
-
-
+<div style="margin-top:12px;display:flex;flex-direction:column;gap:12px">
+<div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. ダイエット中のカロリー計算の注意点は？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">ダイエット中のカロリー制限は「1日のTDEE（総消費エネルギー）の80〜90%」程度に設定することが一般的に推奨されています。急激な制限（1,000kcal以下など）は基礎代謝の低下・筋肉量の減少・栄養素不足を引き起こすリスクがあります。特にたんぱく質は体重1kgあたり1.2〜1.6gを確保することで筋肉の分解を防ぎます。「食べない」より「何を食べるか」を変える栄養管理が長期的な健康維持につながります。本ツールでレシピのたんぱく質・カロリーをチェックしながら食事計画を立ててください。</p></div>
+<div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. アレルギー・食事制限がある場合の利用方法は？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">本ツールは食材ごとの栄養素を個別に計算できるため、アレルギー食材を除外した代替レシピの栄養価確認に活用できます。例えば、乳製品アレルギーの場合は牛乳を豆乳・オーツミルクに代替した際の栄養変化を比較できます。ただし本ツールはアレルギー診断や医療用途を目的としたものではありません。食物アレルギーの管理については医師・栄養士の指導を受けることを強くおすすめします。</p></div>
+</div>
 </div>
 </div>
 <!-- r31-tool-notice -->
@@ -885,5 +963,12 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
   }, {passive:true});
 })();
 </script>
+<!-- r31-cookie-banner -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;z-index:9999;font-size:.85rem;box-shadow:0 -2px 10px rgba(0,0,0,.3)">
+<div>当サイトはCookieおよびGoogle Analyticsを使用しています。<a href="/privacy-policy.html" style="color:#60a5fa;text-decoration:underline">プライバシーポリシー</a>をご確認ください。</div>
+<button onclick="document.getElementById('cookie-banner').style.display='none';window.grantConsent && window.grantConsent()" style="background:#3b82f6;color:#fff;border:none;padding:.5rem 1.25rem;border-radius:.375rem;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap">同意して閉じる</button>
+</div>
+<script>if(localStorage.getItem('cookie-consent'))document.getElementById('cookie-banner').style.display='none'</script>
+<script src="/assets/consent-mode.js"></script>
 </body>
 </html>
